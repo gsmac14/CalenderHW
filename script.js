@@ -5,15 +5,15 @@ $(document).ready(function () {
     // console.log(currentDate)
     
     //time
-    $("#9").text("9:00AM");
-    $("#10").text("10:00AM");
-    $("#11").text("11:00AM");
-    $("#12").text("12:00AM");
-    $("#13").text("1:00PM");
-    $("#14").text("2:00PM");
-    $("#15").text("3:00PM");
-    $("#16").text("4:00PM");
-    $("#17").text("5:00PM");
+    $("#9").text("9AM");
+    $("#10").text("10AM");
+    $("#11").text("11AM");
+    $("#12").text("12AM");
+    $("#13").text("1PM");
+    $("#14").text("2PM");
+    $("#15").text("3PM");
+    $("#16").text("4PM");
+    $("#17").text("5PM");
 
  //create changing colors for past, present, and future
  //used if and else statements to to compare times between past, present and future
