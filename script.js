@@ -14,6 +14,8 @@ $(document).ready(function () {
   $("#15").text("3PM");
   $("#16").text("4PM");
   $("#17").text("5PM");
+  //   console.log("#9")
+
 
   //create changing colors for past, present, and future
   //used if and else statements to to compare times between past, present and future
@@ -33,10 +35,17 @@ $(document).ready(function () {
 
   $(".saveBtn").on("click", function (event) {
     event.preventDefault();
+    console.log($(this)[0].parentElement.children[0]);
+    var timeId = $(this)[0].parentElement.children[0].id;
     var value = $(this).siblings(".col-10").val();
-    var timeEl = $(this).siblings(".time-block").attr("id");
-    localStorage.setItem(timeEl, value);
+    localStorage.setItem(timeId, value);
     //console.log(value);
-    var lastInput = localStorage.getItem(value);
   });
+  //creted localstarge getItme to help entered text stay after refreshed.
+  for (var i = 1; i < 10; i++) {
+    var rowPar = $("#row" + i);
+    var item = localStorage.getItem(i + 8);
+    $(rowPar[0]).children(".col-10").text(item);
+
+  }
 });
